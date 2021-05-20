@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+akra/node_modules
 /.pnp
 .pnp.js
 
