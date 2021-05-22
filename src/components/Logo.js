@@ -1,9 +1,17 @@
+import { Link } from "react-router-dom"
 import logo from "../assets/akra.svg"
 
 const Logo = () => {
   return (
     <>
-      <img src={logo} alt="Akra logo" title="Akra Ecommerce" />
+      <Link to="/">
+        <img
+          src={logo}
+          alt="Akra logo"
+          title="Akra Ecommerce"
+          className="w-20"
+        />
+      </Link>
     </>
   )
 }
