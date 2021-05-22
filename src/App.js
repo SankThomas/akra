@@ -10,9 +10,8 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact>
-          <Header />
-        </Route>
+        <Header />
+        <Route path="/" exact></Route>
         <Route path="*">
           <Error />
         </Route>
