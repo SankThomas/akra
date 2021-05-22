@@ -8,9 +8,9 @@ const NavbarRight = () => {
 
   return (
     <>
-      <ul>
+      <ul className="flex items-center justify-between">
         {rightLinks.map(({ id, title, url }) => (
-          <li key={id}>
+          <li key={id} className="mx-2 text-lg">
             <NavLink to={url}>{title}</NavLink>
           </li>
         ))}
