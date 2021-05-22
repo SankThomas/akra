@@ -1,14 +1,20 @@
+import { useState } from "react"
 import NavbarLeft from "./NavbarLeft"
 import Logo from "./Logo"
 import NavbarRight from "./NavbarRight"
+import MenuButton from "./MenuButton"
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <>
-      <header className="flex">
-        <div>
-          <NavbarLeft />
-        </div>
+      <header className="relative flex items-center justify-between p-5 shadow-md">
+        {isOpen && (
+          <div>
+            <NavbarLeft setIsOpen={setIsOpen} />
+          </div>
+        )}
 
         <div>
           <Logo />
@@ -17,6 +23,10 @@ const Header = () => {
         <nav>
           <NavbarRight />
         </nav>
+
+        <div className="-mb-2 md:hidden">
+          <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
       </header>
     </>
   )
